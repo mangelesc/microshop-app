@@ -1,0 +1,22 @@
+<div class="mainmenu-component-div">
+  <div class="mainmenu-left">
+    <button
+      *ngFor="let item of menuItemsLeft"
+      mat-button
+      [routerLink]="item.url"
+    >
+      {{ item.label }}
+      <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+    </button>
+  </div>
+  <div class="mainmenu-right">
+    <button
+      *ngFor="let item of menuItemsRight"
+      mat-button
+      [routerLink]="item.url"
+    >
+      {{ item.label }}
+      <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+    </button>
+  </div>
+</div>

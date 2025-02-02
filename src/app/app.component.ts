@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'microshop-app';
+
+  public menuItemsLeft = [
+    { label: 'Listado', icon: 'label', url: './' },
+    { label: 'Productos', icon: 'add', url: './products' },
+  ];
+
+  public menuItemsRight = [
+    { label: 'Iniciar Sesion', url: './auth/login' },
+    { label: 'Crear Usuario', url: './auth/signup' },
+  ];
 }
