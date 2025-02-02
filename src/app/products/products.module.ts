@@ -6,6 +6,8 @@ import { AddnewPageComponent } from './pages/addnew-page/addnew-page.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { MaterialModule } from '../material/material.module';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -13,8 +15,9 @@ import { ProductPageComponent } from './pages/product-page/product-page.componen
     LayoutPageComponent,
     ListPageComponent,
     ProductPageComponent,
+    CardComponent,
   ],
-  imports: [CommonModule, ProductsRoutingModule],
+  imports: [CommonModule, ProductsRoutingModule, MaterialModule],
   exports: [LayoutPageComponent],
 })
 export class ProductsModule {}
