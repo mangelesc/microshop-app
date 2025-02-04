@@ -5,12 +5,13 @@ import { Product } from '../../interfaces/product.interface';
   selector: 'products-product-card',
   standalone: false,
   templateUrl: './card.component.html',
-  styles: [],
+  styleUrl: './card.component.css',
 })
 export class CardComponent implements OnInit {
   @Input()
   public product!: Product;
 
+  // Validación de Product
   ngOnInit(): void {
     if (!this.product) throw Error('Product property is required');
   }

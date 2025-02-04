@@ -1,21 +1,22 @@
 export interface Product {
-  id:          number;
-  title:       string;
-  price:       number;
+  id: number;
+  title: string;
+  price: number;
   description: string;
-  category:    Category;
-  image:       string;
-  rating:      Rating;
+  category: Category;
+  image: string;
+  rating: Rating;
+  alt_img?: string;
 }
 
 export enum Category {
-  Electronics = "electronics",
-  Jewelery = "jewelery",
+  Electronics = 'electronics',
+  Jewelery = 'jewelery',
   MenSClothing = "men's clothing",
   WomenSClothing = "women's clothing",
 }
 
 export interface Rating {
-  rate:  number;
+  rate: number;
   count: number;
 }

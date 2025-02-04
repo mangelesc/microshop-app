@@ -8,6 +8,8 @@ import { ListPageComponent } from './pages/list-page/list-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { MaterialModule } from '../material/material.module';
 import { CardComponent } from './components/card/card.component';
+import { ProductImagePipe } from './pipes/product-image.pipe';
+import { ProductTitlePipe } from './pipes/product-title.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { CardComponent } from './components/card/card.component';
     ListPageComponent,
     ProductPageComponent,
     CardComponent,
+    ProductImagePipe,
+    ProductTitlePipe,
   ],
   imports: [CommonModule, ProductsRoutingModule, MaterialModule],
   exports: [LayoutPageComponent],
