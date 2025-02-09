@@ -1,0 +1,58 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
+    <mat-toolbar>
+      <span>MicroShop</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let item of menuItemsLeft"
+        [routerLink]="item.url"
+        (click)="sidenav.toggle()"
+      >
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        {{ item.label }}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <div class="mainmenu-component-div">
+      <div class="mainmenu-left">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div class="mainmenu-right">
+        <app-search-bar></app-search-bar>
+        <div>
+          <button
+            *ngFor="let item of menuItemsRight"
+            mat-button
+            [routerLink]="item.url"
+          >
+            {{ item.label }}
+            <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <span class="spacer"></span>
+
+    <!-- <button mat-button>Logout</button> -->
+  </mat-toolbar>
+
+  <div class="container p-2">
+    <!-- <router-outlet></router-outlet> -->
+    <ng-container *ngIf="showMainHtml; else routerContent"> </ng-container>
+
+    <ng-template #routerContent>
+      <router-outlet></router-outlet>
+    </ng-template>
+  </div>
+</mat-sidenav-container>

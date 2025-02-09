@@ -1,0 +1,46 @@
+<mat-card class="product-card">
+  <div class="product-card-main" [routerLink]="['/products', product.id]">
+    <mat-card-header>
+      <mat-card-title>{{ product | productTitle : 20 }}</mat-card-title>
+      <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <!-- TODO: imagen -->
+    <img
+      class="product-card-main-img"
+      mat-card-image
+      [src]="product | productImage"
+      [alt]="product.alt_img || product.title"
+    />
+
+    <mat-card-content class="mt-2">
+      <h4>{{ product.price }} €</h4>
+      <p>
+        <strong>Rating: </strong> {{ product.rating.rate }}
+        <span>({{ product.rating.count }} opinions)</span>
+        <br />
+      </p>
+    </mat-card-content>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+    <!-- <button mat-button mat-raised [routerLink]="['/products', product.id]">
+      <mat-icon>more_horiz</mat-icon>
+      More info
+    </button> -->
+
+    <span class="spacer"></span>
+
+    <button
+      mat-button
+      mat-raised
+      color="primary"
+      [routerLink]="['/products/edit', product.id]"
+    >
+      <mat-icon>local_mall</mat-icon>
+      Add to cart
+    </button>
+  </mat-card-actions>
+</mat-card>

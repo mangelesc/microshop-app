@@ -1,0 +1,19 @@
+mat-sidenav-container {
+  padding: 20px 0px;
+}
+.mainmenu-component-div {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mainmenu-right {
+  display: flex;
+  align-items: center;
+}
+/* .example-spacer {
+  flex: 1 1 auto;
+} */

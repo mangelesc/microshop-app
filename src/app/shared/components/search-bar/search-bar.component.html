@@ -1,0 +1,31 @@
+<mat-form-field>
+  <mat-label>Search for products</mat-label>
+  <input
+    type="text"
+    matInput
+    [formControl]="searchInput"
+    (input)="searchProduct()"
+    [matAutocomplete]="auto"
+  />
+  <mat-icon>search</mat-icon>
+  <mat-autocomplete
+    autoActiveFirstOption
+    #auto="matAutocomplete"
+    (optionSelected)="onSelectedOption($event)"
+  >
+    <mat-option *ngFor="let product of products" [value]="product">
+      {{ product.title }}
+    </mat-option>
+
+    <mat-option
+      *ngIf="
+        products.length === 0 &&
+        searchInput.value &&
+        searchInput.value.length > 0
+      "
+      value=""
+    >
+      Sorry, there's no products similar to {{ searchInput.value }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
