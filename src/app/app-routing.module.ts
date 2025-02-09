@@ -3,16 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotfoundPageComponent } from './shared/pages/notfound-page/notfound-page.component';
 
 const routes: Routes = [
-  // {
-  //   path: 'products',
-  //   loadChildren: () =>
-  //     import('./products/products.module').then((m) => m.ProductsModule),
-  // },
-  // {
-  //   path: 'auth',
-  //   // Cargar menienta lazyload
-  //   loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
-  // },
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./modules/public/public.module').then((m) => m.PublicModule),
+  },
+  {
+    path: 'auth',
+    // Cargar menienta lazyload
+    loadChildren: () =>
+      import('./modules/auth/auth.module').then((m) => m.AuthModule),
+  },
   // {
   //   path: 'admin',
   //   // Cargar menienta lazyload

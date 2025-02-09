@@ -15,7 +15,7 @@
         (click)="sidenav.toggle()"
       >
         <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
-        {{ item.label }}
+        {{ item.label | titlecase }}
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
@@ -35,7 +35,7 @@
             mat-button
             [routerLink]="item.url"
           >
-            {{ item.label }}
+            {{ item.label | titlecase }}
             <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
           </button>
         </div>

@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-layout-page',
-  imports: [],
+  standalone: false,
   templateUrl: './layout-page.component.html',
-  styleUrl: './layout-page.component.css'
+  styleUrl: './layout-page.component.css',
 })
-export class LayoutPageComponent {
-
-}
+export class LayoutPageComponent {}

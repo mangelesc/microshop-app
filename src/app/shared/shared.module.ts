@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NotfoundPageComponent } from './pages/notfound-page/notfound-page.component';
-import {
-  MainmenuComponent,
-  PublicMenuComponent,
-} from './components/menu-components/public-menu/public-menu.component';
+import { PublicMenuComponent } from './components/menu-components/public-menu/public-menu.component';
 import { MaterialModule } from '../material/material.module';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
