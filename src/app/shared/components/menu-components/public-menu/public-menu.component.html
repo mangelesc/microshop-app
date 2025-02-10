@@ -52,7 +52,9 @@
     <ng-container *ngIf="showMainHtml; else routerContent"> </ng-container>
 
     <ng-template #routerContent>
-      <router-outlet></router-outlet>
+      <div class="router-outlet-div">
+        <router-outlet></router-outlet>
+      </div>
     </ng-template>
   </div>
 </mat-sidenav-container>

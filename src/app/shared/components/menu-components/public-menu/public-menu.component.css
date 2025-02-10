@@ -17,3 +17,6 @@ mat-sidenav-container {
 /* .example-spacer {
   flex: 1 1 auto;
 } */
+.router-outlet-div {
+  margin: 0px 25px;
+}

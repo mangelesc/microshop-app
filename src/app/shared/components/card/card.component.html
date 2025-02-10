@@ -1,46 +1,42 @@
-<mat-card class="product-card">
-  <div class="product-card-main" [routerLink]="['/products', product.id]">
-    <mat-card-header>
-      <mat-card-title>{{ product | productTitle : 20 }}</mat-card-title>
-      <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
-    </mat-card-header>
-
-    <!-- TODO: imagen -->
+<div class="product-card-main">
+  <div class="product-card-div-img" [routerLink]="['/products', product.id]">
     <img
-      class="product-card-main-img"
-      mat-card-image
-      [src]="product | productImage"
+      class="product-card-div-img-img"
+      [src]="product | customImage"
       [alt]="product.alt_img || product.title"
     />
-
-    <mat-card-content class="mt-2">
-      <h4>{{ product.price }} €</h4>
-      <p>
-        <strong>Rating: </strong> {{ product.rating.rate }}
-        <span>({{ product.rating.count }} opinions)</span>
-        <br />
-      </p>
-    </mat-card-content>
   </div>
-
-  <mat-divider></mat-divider>
-
-  <mat-card-actions>
-    <!-- <button mat-button mat-raised [routerLink]="['/products', product.id]">
-      <mat-icon>more_horiz</mat-icon>
-      More info
-    </button> -->
-
-    <span class="spacer"></span>
-
+  <div class="product-card-button">
     <button
       mat-button
       mat-raised
       color="primary"
-      [routerLink]="['/products/edit', product.id]"
+      [routerLink]="['/products', product.id]"
     >
-      <mat-icon>local_mall</mat-icon>
+      <!-- <mat-icon>local_mall</mat-icon> -->
       Add to cart
     </button>
-  </mat-card-actions>
-</mat-card>
+  </div>
+  <div class="product-card-details">
+    <div class="product-card-title">
+      <h3>
+        {{ product | productTitle : 30 | uppercase }}
+      </h3>
+    </div>
+
+    <div class="product-card-subtitle">
+      <p class="product-card-subtitle-category">
+        {{ product.category | titlecase }}
+      </p>
+      <p class="product-card-subtitle-price">{{ product.price }} €</p>
+    </div>
+    <!-- <div class="product-card-score">
+      <p>
+        <strong>Rating: </strong> {{ product.rating.rate }}
+        <mat-icon>star</mat-icon>
+        <span>({{ product.rating.count }} opinions)</span>
+        <br />
+      </p>
+    </div> -->
+  </div>
+</div>

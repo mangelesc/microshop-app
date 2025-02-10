@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Product } from '../../products/interfaces/product.interface';
+import { Product } from '../../core/interfaces/product.interface';
 
 @Pipe({
   name: 'productImage',
