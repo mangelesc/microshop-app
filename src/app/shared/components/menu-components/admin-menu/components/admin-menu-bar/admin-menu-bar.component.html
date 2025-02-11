@@ -1,0 +1,21 @@
+<!-- Admin bar -->
+<div class="admin-menu-bar-main">
+  <div class="admin-menu-bar-main-menu-items">
+    <ng-container *ngFor="let item of menuBarItems">
+    <a class="admin-menu-bar-main-menu-items-item" mat-button [matMenuTriggerFor]="menuRef" [routerLink]="item.link">
+      <mat-icon>{{ item.icon }}</mat-icon>
+      {{ item.name }}
+    </a>
+
+    <mat-menu #menuRef="matMenu">
+      <ng-container *ngFor="let child of item.children">
+        <button mat-menu-item [routerLink]="child.link">
+          <mat-icon>{{ child.icon }}</mat-icon>
+          {{ child.name }}
+        </button>
+      </ng-container>
+    </mat-menu>
+  </ng-container>
+  </div>
+  
+</div>

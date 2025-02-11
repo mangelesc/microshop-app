@@ -11,6 +11,13 @@
   --color-alert-dark: #dabeb6;
   --color-text-dark: black;
   --color-text-light: white;
+
+  --admin-menu-dark: #596a75;
+  --admin-menu-light: #6e7c86;
+
+  /* --admin-menu-dark: #1d2327;
+  --admin-menu-light: #2c3338; */
+  --admin-menu-text: white;
 }
 
 body {

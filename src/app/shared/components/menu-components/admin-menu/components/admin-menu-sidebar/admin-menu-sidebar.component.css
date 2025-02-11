@@ -1,0 +1,36 @@
+.admin-menu-main-div {
+  position: fixed;
+  left: 0;
+  top: 40px;
+  width: 160px;
+  height: calc(100vh - 40px);
+  background-color: var(--admin-menu-dark);
+  color: var(--admin-menu-text);
+  box-sizing: border-box;
+}
+
+.mat-tree-node-parent {
+  padding-left: 0px !important;
+  background-color: var(--admin-menu-dark);
+  color: var(--admin-menu-text);
+  font-size: 14px;
+  padding: 8px 8px 8px 36px;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.mat-tree-node-parent button {
+  color: var(--admin-menu-text);
+}
+
+.mat-tree-node-children {
+  padding-left: 0px !important;
+  background-color: var(--admin-menu-light);
+  color: var(--admin-menu-text);
+  font-size: 14px;
+}
+
+.menu-child {
+  margin-left: 25px;
+  font-size: 11pt;
+}

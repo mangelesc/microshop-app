@@ -12,6 +12,8 @@ import { CardComponent } from './components/card/card.component';
 import { ProductTitlePipe } from './pipes/product-title.pipe';
 import { ProductImagePipe } from './pipes/product-image.pipe';
 import { CustomImagePipe } from './pipes/custom-image.pipe';
+import { AdminMenuBarComponent } from './components/menu-components/admin-menu/components/admin-menu-bar/admin-menu-bar.component';
+import { AdminMenuSidebarComponent } from './components/menu-components/admin-menu/components/admin-menu-sidebar/admin-menu-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { CustomImagePipe } from './pipes/custom-image.pipe';
     SearchBarComponent,
     AdminMenuComponent,
     CardComponent,
+    AdminMenuBarComponent,
+    AdminMenuSidebarComponent,
 
     ProductTitlePipe,
     ProductImagePipe,

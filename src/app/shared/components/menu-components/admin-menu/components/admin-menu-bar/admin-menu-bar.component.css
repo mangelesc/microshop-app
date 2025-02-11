@@ -1,0 +1,23 @@
+.admin-menu-bar-main {
+  position: fixed; /* Fija el menú */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0px 20px;
+  background-color: var(--admin-menu-dark);
+  color: var(--admin-menu-text);
+}
+
+.admin-menu-bar-main-menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0px 35px;
+}
+
+.admin-menu-bar-main-menu-items-item {
+  color: var(--admin-menu-text) !important;
+  font-size: 12px !important;
+  font-weight: normal;
+}

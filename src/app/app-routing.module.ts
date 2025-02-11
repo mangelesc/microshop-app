@@ -14,12 +14,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
-  // {
-  //   path: 'admin',
-  //   // Cargar menienta lazyload
-  //   loadChildren: () =>
-  //     import('./admin/admin.module').then((m) => m.AdminModule),
-  // },
+  {
+    path: 'admin',
+    // Cargar menienta lazyload
+    loadChildren: () =>
+      import('./modules/admin/admin.module').then((m) => m.AdminModule),
+  },
   {
     path: '404',
     component: NotfoundPageComponent,

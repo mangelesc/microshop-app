@@ -1,1 +1,12 @@
-<p>layout-page works!</p>
+<div class="layout-container">
+  <aside class="sidebar">
+    <!-- <app-admin-menu [menuData]="TREE_DATA"></app-admin-menu> -->
+    <app-admin-menu
+      [menuData]="TREE_DATA"
+      [menuBarItems]="menuBarItems"
+    ></app-admin-menu>
+  </aside>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
