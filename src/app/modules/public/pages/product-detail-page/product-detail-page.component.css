@@ -1,0 +1,64 @@
+/* BreadCrumbs */
+
+.breadcrumbs {
+  margin: 0px 0px 20px 0px;
+}
+
+.breadcrumbs span {
+  font-size: 12pt;
+  font-family: "Josefin Sans", serif;
+}
+
+.breadcrumbs-link:hover {
+  cursor: pointer;
+}
+
+/* Product card */
+.product-detail-card-img {
+  display: flex;
+  width: 25%;
+}
+
+.product-detail-card-content-text {
+  margin-bottom: 50px;
+}
+
+.product-detail-card-content-title {
+  margin-bottom: 15px;
+}
+
+.product-detail-card-content-price {
+  font-family: "Josefin Sans", serif;
+  font-size: 1.7em;
+  margin-bottom: 35px;
+}
+
+.product-detail-card-content-moredetails {
+  margin-bottom: 35px;
+}
+
+.product-detail-card-content-rating-icon {
+  font-size: 12pt;
+}
+
+.mat-icon {
+  height: auto;
+  width: auto;
+}
+
+/* Add to cart */
+.product-detail-card-content-shop-button {
+  width: 100%;
+  height: 3em;
+  border-radius: 0px;
+  background-color: rgb(34, 33, 33);
+  font-family: "Josefin Sans", serif;
+  color: var(--color-text-light);
+  font-weight: 350;
+  font-size: larger;
+}
+
+.product-detail-card-content-shop-button:hover {
+  border: 1px solid black;
+  background-color: black;
+}

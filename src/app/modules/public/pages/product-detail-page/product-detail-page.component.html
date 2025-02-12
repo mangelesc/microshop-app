@@ -1,1 +1,89 @@
-<p>product-detail-page works!</p>
+<ng-template #divLoading>
+  <mat-spinner></mat-spinner>
+</ng-template>
+
+<div *ngIf="product; else divLoading">
+  <div class="breadcrumbs">
+    <span class="breadcrumbs-link" routerLink="/products">All Products</span>
+    <span> / </span>
+    <span
+      class="breadcrumbs-link"
+      routerLink="/products/{{ product.category | ProductCategoryRoutePipe }}"
+    >
+      {{ product.category | titlecase }}
+    </span>
+  </div>
+
+  <div class="product-detail-card grid">
+    <!-- Sección de imágenes -->
+    <div class="col-12 md:col-6 lg:col-7 flex">
+      <div class="product-detail-card-img grid w-full">
+        <div
+          class="product-detail-card-img-img col-6 flex justify-content-center"
+        >
+          <img
+            class="w-full h-auto"
+            [src]="product | customImage"
+            [alt]="product.alt_img || product.title"
+          />
+        </div>
+        <div class="col-6 flex justify-content-center">
+          <img
+            class="w-full h-auto"
+            [src]="product | customImage"
+            [alt]="product.alt_img || product.title"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de contenido -->
+    <div class="product-detail-card-content col-12 md:col-6 lg:col-5">
+      <div class="product-detail-card-content-text">
+        <h1 class="product-detail-card-content-title">
+          {{ product.title | uppercase }}
+        </h1>
+        <div class="product-detail-card-content-price">
+          {{ product.price }} €
+        </div>
+        <div class="product-detail-card-content-moredetails">
+          <p>
+            {{ product.description }}
+          </p>
+        </div>
+        <div class="product-detail-card-content-rating">
+          <span>
+            {{ product.rating.rate }}
+            <mat-icon class="product-detail-card-content-rating-icon"
+              >star</mat-icon
+            >
+          </span>
+
+          <span> ({{ product.rating.count }} Opinions) </span>
+        </div>
+      </div>
+
+      <div class="grid product-detail-card-content-shop">
+        <!-- Selector de cantidad -->
+        <div class="col-3">
+          <app-counter-button-component
+            [value]="quantity"
+            (valueChange)="updateQuantity($event)"
+          >
+          </app-counter-button-component>
+        </div>
+
+        <!-- Botón Añadir al carrito -->
+        <div class="col-9">
+          <button
+            mat-button
+            class="w-full product-detail-card-content-shop-button"
+            (click)="addToCart()"
+          >
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

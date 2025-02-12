@@ -8,14 +8,16 @@ import { Component } from '@angular/core';
 })
 export class LayoutPageComponent {
   public menuItemsLeft = [
-    { label: 'electronics', icon: 'label', url: './' },
-    { label: 'jewelery', icon: 'label', url: './' },
-    { label: "men's clothing", icon: 'label', url: './' },
-    { label: "women's clothing", icon: 'label', url: './' },
+    { label: 'see all', url: './' },
+    { label: 'electronics', url: './' },
+    { label: 'jewelery', url: './' },
+    { label: "men's clothing", url: './' },
+    { label: "women's clothing", url: './' },
   ];
 
   public menuItemsRight = [
     { label: 'My Account', icon: 'user', url: '../auth/signin' },
     { label: 'My Cart', icon: '', url: '../auth/signup' },
+    { label: 'Admin Panel', icon: '', url: '../admin' },
   ];
 }

@@ -6,7 +6,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { ListProductsPageComponent } from './pages/list-products-page/list-products-page.component';
 import { MaterialModule } from '../../material/material.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../../shared/shared.module';
 import { ProductDetailPageComponent } from './pages/product-detail-page/product-detail-page.component';
 
@@ -19,9 +19,11 @@ import { ProductDetailPageComponent } from './pages/product-detail-page/product-
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+
     PublicRoutingModule,
     MaterialModule,
-    ReactiveFormsModule,
     SharedModule,
   ],
   exports: [LayoutPageComponent],

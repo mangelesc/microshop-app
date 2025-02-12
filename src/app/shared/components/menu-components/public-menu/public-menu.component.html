@@ -1,11 +1,11 @@
 <mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
     <mat-toolbar>
-      <span>MicroShop</span>
       <span class="spacer"></span>
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
+      <h3 class="menu-shop-name">MICROSHOP</h3>
     </mat-toolbar>
 
     <mat-nav-list>
@@ -14,8 +14,8 @@
         [routerLink]="item.url"
         (click)="sidenav.toggle()"
       >
-        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
-        {{ item.label | titlecase }}
+        <!-- <mat-icon matListItemIcon>{{ item.icon }}</mat-icon> -->
+        <h5 class="menu-shop-item">{{ item.label | uppercase }}</h5>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
@@ -26,18 +26,21 @@
         <button mat-icon-button (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
+        <h3 class="menu-shop-name">MICROSHOP</h3>
       </div>
       <div class="mainmenu-right">
-        <app-search-bar></app-search-bar>
         <div>
-          <button
-            *ngFor="let item of menuItemsRight"
-            mat-button
-            [routerLink]="item.url"
-          >
-            {{ item.label | titlecase }}
-            <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
-          </button>
+          <app-search-bar></app-search-bar>
+          <div>
+            <button
+              *ngFor="let item of menuItemsRight"
+              mat-button
+              [routerLink]="item.url"
+            >
+              {{ item.label | titlecase }}
+              <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+            </button>
+          </div>
         </div>
       </div>
     </div>

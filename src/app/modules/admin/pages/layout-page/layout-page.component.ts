@@ -47,6 +47,12 @@ export class LayoutPageComponent {
       children: [],
     },
     {
+      name: 'FrontEnd',
+      icon: 'web',
+      link: '/',
+      children: [],
+    },
+    {
       name: 'Log Out',
       icon: 'person',
       // link: '/',

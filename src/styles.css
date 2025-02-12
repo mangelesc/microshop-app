@@ -31,6 +31,7 @@ h4,
 h5,
 h6 {
   font-family: "Josefin Sans", serif;
+  font-weight: 350;
 }
 
 html,
@@ -40,4 +41,5 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  line-height: 1.6;
 }

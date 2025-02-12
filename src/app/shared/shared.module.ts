@@ -14,6 +14,8 @@ import { ProductImagePipe } from './pipes/product-image.pipe';
 import { CustomImagePipe } from './pipes/custom-image.pipe';
 import { AdminMenuBarComponent } from './components/menu-components/admin-menu/components/admin-menu-bar/admin-menu-bar.component';
 import { AdminMenuSidebarComponent } from './components/menu-components/admin-menu/components/admin-menu-sidebar/admin-menu-sidebar.component';
+import { CounterButtonComponentComponent } from './components/buttons-components/counter-button-component/counter-button-component.component';
+import { ProductCategoryRoutePipe } from './pipes/products-category-route-breadcrumbs.pipe';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,12 @@ import { AdminMenuSidebarComponent } from './components/menu-components/admin-me
     CardComponent,
     AdminMenuBarComponent,
     AdminMenuSidebarComponent,
+    CounterButtonComponentComponent,
 
     ProductTitlePipe,
     ProductImagePipe,
     CustomImagePipe,
+    ProductCategoryRoutePipe,
   ],
   imports: [
     CommonModule,
@@ -42,10 +46,12 @@ import { AdminMenuSidebarComponent } from './components/menu-components/admin-me
     SearchBarComponent,
     AdminMenuComponent,
     CardComponent,
+    CounterButtonComponentComponent,
 
     ProductTitlePipe,
     ProductImagePipe,
     CustomImagePipe,
+    ProductCategoryRoutePipe,
   ],
 })
 export class SharedModule {}

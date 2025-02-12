@@ -1,31 +1,33 @@
-<mat-form-field class="form-field">
-  <!-- <mat-label class="form-field-label">Search for products</mat-label> -->
-  <input
-    type="text"
-    matInput
-    [formControl]="searchInput"
-    (input)="searchProduct()"
-    [matAutocomplete]="auto"
-  />
-  <mat-icon>search</mat-icon>
-  <mat-autocomplete
-    autoActiveFirstOption
-    #auto="matAutocomplete"
-    (optionSelected)="onSelectedOption($event)"
-  >
-    <mat-option *ngFor="let product of products" [value]="product">
-      {{ product.title }}
-    </mat-option>
-
-    <mat-option
-      *ngIf="
-        products.length === 0 &&
-        searchInput.value &&
-        searchInput.value.length > 0
-      "
-      value=""
+<div class="main-div-mat-form-field">
+  <mat-form-field class="form-field">
+    <!-- <mat-label class="form-field-label">Search for products</mat-label> -->
+    <input
+      type="text"
+      matInput
+      [formControl]="searchInput"
+      (input)="searchProduct()"
+      [matAutocomplete]="auto"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+    <mat-autocomplete
+      autoActiveFirstOption
+      #auto="matAutocomplete"
+      (optionSelected)="onSelectedOption($event)"
     >
-      Sorry, there's no products similar to {{ searchInput.value }}
-    </mat-option>
-  </mat-autocomplete>
-</mat-form-field>
+      <mat-option *ngFor="let product of products" [value]="product">
+        {{ product.title }}
+      </mat-option>
+
+      <mat-option
+        *ngIf="
+          products.length === 0 &&
+          searchInput.value &&
+          searchInput.value.length > 0
+        "
+        value=""
+      >
+        Sorry, there's no products similar to {{ searchInput.value }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>

@@ -1,8 +1,8 @@
 mat-sidenav-container {
-  padding: 20px 0px;
+  padding: 0px 0px;
 }
 .mainmenu-component-div {
-  padding: 10px 20px;
+  padding: 0px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10,13 +10,35 @@ mat-sidenav-container {
   width: 100%;
 }
 
+.router-outlet-div {
+  margin: 0px 25px;
+}
+
+.menu-shop-item {
+  padding: 0px 15px;
+}
+
+h3 {
+  font-family: "Josefin Sans", serif;
+  font-weight: 350;
+  padding-top: 7px;
+}
+
+/* Right menu */
 .mainmenu-right {
   display: flex;
   align-items: center;
+  padding-top: 5px;
 }
-/* .example-spacer {
-  flex: 1 1 auto;
-} */
-.router-outlet-div {
-  margin: 0px 25px;
+
+.mainmenu-right div {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+
+/* Left Menu */
+.mainmenu-left {
+  display: flex;
+  align-items: center;
 }

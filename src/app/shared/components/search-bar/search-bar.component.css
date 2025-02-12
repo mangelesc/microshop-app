@@ -1,6 +1,15 @@
+.main-div-mat-form-field {
+  margin-top: 25px;
+}
 .form-field {
-  width: 300px;
-  /* background-color: var(--color-secondary); */
+  width: 250px;
+  height: 70px;
+  display: flex;
+  align-items: center !important;
+}
+.form-field input {
+  display: flex;
+  align-items: center !important;
 }
 
 ::ng-deep .mat-mdc-form-field .mdc-line-ripple {
@@ -11,35 +20,30 @@
   color: black;
 }
 
-/* ::ng-deep mat-autocomplete {
-  background-color: var(--color-secondary) !important;
-  padding: 10px 16px;
-} */
-
-/* ::ng-deep mat-option {
-  background-color: var(--color-secondary) !important;
-}
-
-::ng-deep input {
-  background-color: var(--color-secondary) !important;
-}
-
-::ng-deep mat-mdc-text-field-wrapper {
-  background-color: var(--color-secondary) !important;
-}
-::ng-deep mdc-text-field {
-  background-color: var(--color-secondary) !important;
-}
-::ng-deep ng-tns-c508571215-106 {
-  background-color: var(--color-secondary) !important;
-}
-::ng-deep mdc-text-field--filled {
-  background-color: var(--color-secondary) !important;
-} */
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background-color: var(--color-secondary, var(--color-secondary));
 }
 
 .mdc-text-field--filled {
   background-color: var(--color-secondary, var(--color-secondary));
+}
+
+.mat-mdc-input-element {
+  background-color: var(--color-secondary) !important;
+}
+
+::ng-deep .mat-mdc-form-field .mdc-text-field {
+  background-color: var(--color-secondary) !important;
+}
+
+::ng-deep .mat-mdc-form-field .mdc-text-field__input {
+  font-size: 14px !important; /* Cambia el tamaño */
+}
+
+/* Desplegable */
+::ng-deep .mat-mdc-autocomplete-panel {
+  background-color: var(
+    --color-secondary
+  ) !important; /* Cambia el fondo del dropdown */
+  border-radius: 8px;
 }
