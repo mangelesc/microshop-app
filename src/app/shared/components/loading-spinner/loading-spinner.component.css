@@ -1,0 +1,43 @@
+.loader-container {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column; /* Coloca el texto debajo del spinner */
+  text-align: center; /* Asegura que el texto esté centrado */
+  gap: 20px; /* Añade espacio entre el spinner y el texto */
+}
+
+.loader {
+  --d: 35px; /* Tamaño aumentado */
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  color: var(--color-alert-dark);
+  box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0,
+    calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1px,
+    calc(0 * var(--d)) calc(1 * var(--d)) 0 2px,
+    calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3px,
+    calc(-1 * var(--d)) calc(0 * var(--d)) 0 4px,
+    calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px,
+    calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px;
+  animation: l27 1s infinite steps(8);
+}
+
+@keyframes l27 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+p {
+  margin: 0; /* Elimina cualquier margen extra */
+  color: #333; /* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+  padding-top: 35px; /* Espacio extra si es necesario */
+}
