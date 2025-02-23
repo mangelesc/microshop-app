@@ -17,6 +17,9 @@ import { AdminMenuSidebarComponent } from './components/menu-components/admin-me
 import { CounterButtonComponentComponent } from './components/buttons-components/counter-button-component/counter-button-component.component';
 import { ProductCategoryRoutePipe } from './pipes/products-category-route-breadcrumbs.pipe';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import {
+  AdminTableProductsComponent,
+} from './components/tables/admin-table/admin-table-products.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
     AdminMenuSidebarComponent,
     CounterButtonComponentComponent,
     LoadingSpinnerComponent,
+    AdminTableProductsComponent,
 
     ProductTitlePipe,
     ProductImagePipe,
@@ -50,6 +54,7 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
     CardComponent,
     CounterButtonComponentComponent,
     LoadingSpinnerComponent,
+    AdminTableProductsComponent,
 
     ProductTitlePipe,
     ProductImagePipe,

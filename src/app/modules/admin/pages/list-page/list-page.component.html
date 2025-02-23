@@ -1,1 +1,8 @@
-<p>list-page works!</p>
+<div *ngIf="route === 'view-products'">
+  <app-admin-table-products [data]="products" [columns]="displayedColumns">
+  </app-admin-table-products>
+</div>
+
+<div *ngIf="route === 'view-categories'">
+  <!-- Aquí iría el componente de categorías si lo deseas -->
+</div>

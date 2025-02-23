@@ -19,7 +19,7 @@ export class AdminMenuComponent implements OnInit {
   @Input() menuBarItems: MenuNode[] = [];
 
   ngOnInit() {
-    console.log('menuData:', this.menuData);
-    console.log('menuBarItems:', this.menuBarItems);
+    // console.log('menuData:', this.menuData);
+    // console.log('menuBarItems:', this.menuBarItems);
   }
 }

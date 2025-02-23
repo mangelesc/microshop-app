@@ -14,27 +14,29 @@ export class LayoutPageComponent {
       name: 'Products',
       icon: 'string',
       children: [
-        { name: 'View products', link: '/admin/products/add-product' },
-        { name: 'Edit products', link: '/admin/products/add-product' },
-        { name: 'Add new products', link: '/admin/products/add-product' },
+        { name: 'View products', link: '/admin/products/view-products' },
+        { name: 'View categories', link: '/admin/products/view-categories' },
+
+        { name: 'Edit products', link: '/admin/products/edit-products' },
+        { name: 'Add new products', link: '/admin/products/add-products' },
       ],
     },
     {
       name: 'Users',
       icon: 'string',
       children: [
-        { name: 'View users', link: '' },
-        { name: 'Edit users', link: '' },
-        { name: 'Add new user', link: '' },
+        { name: 'View users', link: '/admin/users/view-users' },
+        { name: 'Edit users', link: '/admin/users/edit-users' },
+        { name: 'Add new user', link: '/admin/users/add-users' },
       ],
     },
     {
       name: 'Shoppìng',
       icon: 'string',
       children: [
-        { name: 'View carts', link: '' },
-        { name: 'Edit carts', link: '' },
-        { name: 'Add new cart', link: '' },
+        { name: 'View carts', link: '/admin/shopping/view-shopping' },
+        { name: 'Edit carts', link: '/admin/shopping/edit-shopping' },
+        { name: 'Add new cart', link: '/admin/shopping/add-shopping' },
       ],
     },
   ];

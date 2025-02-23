@@ -7,6 +7,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { CreateProductPageComponent } from './pages/create-product-page/create-product-page.component';
 import { CreateCartPageComponent } from './pages/create-cart-page/create-cart-page.component';
 import { CreateUserPageComponent } from './pages/create-user-page/create-user-page.component';
+import { ListPageComponent } from './pages/list-page/list-page.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { CreateUserPageComponent } from './pages/create-user-page/create-user-pa
     CreateProductPageComponent,
     CreateCartPageComponent,
     CreateUserPageComponent,
+    ListPageComponent,
   ],
   imports: [CommonModule, AdminRoutingModule, SharedModule],
 })

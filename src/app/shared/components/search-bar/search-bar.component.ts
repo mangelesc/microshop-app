@@ -47,7 +47,7 @@ export class SearchBarComponent {
 
   navigateToProduct(product: Product) {
     if (product && product.id) {
-      this.router.navigate(['/products', product.id]);
+      this.router.navigate(['/products/id/', product.id]);
     }
   }
 }
