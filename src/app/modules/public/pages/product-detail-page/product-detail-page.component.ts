@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { Product } from '../../../../core/interfaces/product.interface';
+import {
+  Product,
+  Category,
+} from '../../../../core/interfaces/product.interface';
 import { ProductsService } from '../../../../core/services/products.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
@@ -24,7 +27,7 @@ export class ProductDetailPageComponent {
     this.activatedRoute.params
       .pipe(switchMap(({ id }) => this.productsService.getProductById(id)))
       .subscribe((product) => {
-        if (!product) return this.router.navigate(['/heroes/list']);
+        if (!product) return this.router.navigate(['/products']);
 
         this.product = product;
         return;

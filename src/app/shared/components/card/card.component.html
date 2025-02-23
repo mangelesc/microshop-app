@@ -1,5 +1,8 @@
 <div class="product-card-main">
-  <div class="product-card-div-img" [routerLink]="['/products', product.id]">
+  <div
+    class="product-card-div-img"
+    [routerLink]="['/products/id/', product.id]"
+  >
     <img
       class="product-card-div-img-img"
       [src]="product | customImage"
@@ -11,7 +14,7 @@
       mat-button
       mat-raised
       color="primary"
-      [routerLink]="['/products', product.id]"
+      [routerLink]="['/products/id/', product.id]"
     >
       <!-- <mat-icon>local_mall</mat-icon> -->
       Add to cart

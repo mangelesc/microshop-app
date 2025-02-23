@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
-import { Product } from '../../../../core/interfaces/product.interface';
+import {
+  Category,
+  Product,
+} from '../../../../core/interfaces/product.interface';
 import { ProductsService } from '../../../../core/services/products.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs';
+import { CategoriesService } from '../../../../core/services/categories.service';
 
 @Component({
   selector: 'app-list-products-page',
@@ -10,14 +16,40 @@ import { ProductsService } from '../../../../core/services/products.service';
 })
 export class ListProductsPageComponent {
   public products: Product[] = [];
+  public category?: string;
 
-  constructor(private productsService: ProductsService) {}
+  categoryMap: { [key: string]: string } = {
+    electronics: 'electronics',
+    jewelery: 'jewelery',
+    'mens-clothing': "men's clothing",
+    'womens-clothing': "women's clothing",
+  };
 
-  // Con peticiones HTTP, montamos en componente en el iniico (OnInit)
+  constructor(
+    private productsService: ProductsService,
+    private categoriesService: CategoriesService,
+
+    private activatedRoute: ActivatedRoute
+  ) {}
+
+  // Con peticiones HTTP, montamos en componente en el inicio (OnInit)
   ngOnInit(): void {
-    this.productsService
-      .getProducts()
-      .subscribe((products) => (this.products = products));
-    console.log(this.products);
+    this.activatedRoute.params
+      .pipe(
+        switchMap(({ category }) => {
+          if (category) {
+            const formattedCategory = this.categoryMap[category] || category;
+            this.category = formattedCategory;
+            return this.categoriesService.getProductsByCategory(
+              formattedCategory
+            );
+          } else {
+            return this.productsService.getProducts();
+          }
+        })
+      )
+      .subscribe((products) => {
+        this.products = products;
+      });
   }
 }

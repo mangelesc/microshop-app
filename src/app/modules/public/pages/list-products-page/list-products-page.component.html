@@ -1,5 +1,12 @@
 <div>
-  <h1>PRODUCTS</h1>
+  <!-- <h1>PRODUCTS</h1> -->
+  <div class="breadcrumbs">
+    <span class="breadcrumbs-link" routerLink="/products">All Products</span>
+    <span *ngIf="this.category"> / </span>
+    <span class="breadcrumbs-link" routerLink="/products/{{ this.category }}">
+      {{ this.category | titlecase }}
+    </span>
+  </div>
 </div>
 
 <ng-template #divLoading>

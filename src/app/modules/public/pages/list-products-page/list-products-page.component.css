@@ -1,0 +1,14 @@
+/* BreadCrumbs */
+
+.breadcrumbs {
+  margin: 0px 0px 20px 0px;
+}
+
+.breadcrumbs span {
+  font-size: 12pt;
+  font-family: "Josefin Sans", serif;
+}
+
+.breadcrumbs-link:hover {
+  cursor: pointer;
+}

@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
 export class LayoutPageComponent {
   public menuItemsLeft = [
     { label: 'see all', url: './' },
-    { label: 'electronics', url: './' },
-    { label: 'jewelery', url: './' },
-    { label: "men's clothing", url: './' },
-    { label: "women's clothing", url: './' },
+    { label: "men's clothing", url: './mens-clothing' },
+    { label: "women's clothing", url: './womens-clothing' },
+    { label: 'jewelery', url: './jewelery' },
+    { label: 'electronics', url: './electronics' },
   ];
 
   public menuItemsRight = [
